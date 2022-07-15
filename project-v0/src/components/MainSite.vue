@@ -29,7 +29,26 @@
         </li>
       </ul>
     </div>
-    <div id="divInfo"></div>
+    <div id="divInfo">
+      <div id="titleInfo">
+        <h5 class="hInfo">DC COMICS</h5>
+        <ul>
+          <li>Characters</li>
+          <li>Characters</li>
+          <li>Characters</li>
+          <li>Characters</li>
+          <li>Characters</li>
+          <li>Characters</li>
+        </ul>
+      </div>
+      <div id="titleInfo">
+        <h5 class="hInfo">HELP</h5>
+        <ul>
+          <li>Characters</li>
+          <li>Characters</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
 
@@ -69,6 +88,7 @@ export default {
   width: 100%;
   background-color: #0282f9;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 
@@ -79,12 +99,30 @@ export default {
   list-style-type: none;
   display: flex;
   margin: 0;
+  padding: 0;
+}
 
+#divInfo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+
+  background-image: url("../assets/img/footer-bg.jpg");
+}
+
+#titleInfo {
+  width: 200px;
+  text-align: center;
+  color: white;
+  font-weight: 800;
 }
 
 li {
   font-weight: bold;
-  padding: .8rem;
+  padding: .5rem;
   font-size: .8rem;
   transition: .2s;
 }
@@ -98,8 +136,15 @@ li img {
 #divInfo {
   height: 50vh;
   width: 100%;
-  background-color: yellow;
 }
+
+#divInfo ul {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 #hContent {
   font-weight: 400;
