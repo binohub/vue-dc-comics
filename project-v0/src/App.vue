@@ -26,7 +26,7 @@ export default {
     @import "./styles/var.scss"; 
 
     body{
-      background-color: $bg-light ;
+      
     }
 
 

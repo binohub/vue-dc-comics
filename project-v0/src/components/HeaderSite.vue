@@ -1,13 +1,13 @@
 <template>
-  <div class="d-flex justify-content-around align-items-center">
+  <div id="HeaderSite" class="d-flex justify-content-around align-items-center">
     <img class="img-fluid" src="../assets/img/dc-logo-bg.png" alt="logo">
     <nav>
       <ul>
         <li>
-          Home
+          Characters
         </li>
         <li class="active">
-          Home
+          Comics
         </li>
         <li>
           Home
@@ -42,9 +42,17 @@ export default {
 
 <style lang="scss" scoped>
   @import "../styles/var.scss"; 
+
+  #HeaderSite{
+    height: 10vh;
+  }
   img{
-    height: 5rem;
+    height: 3rem;
     margin: 1rem;
+    transition: .5s;
+  }
+    img:hover{
+      filter: invert(2);
   }
   nav ul{
     text-decoration: none;
@@ -58,11 +66,16 @@ export default {
       cursor: pointer;
       padding: .8rem;
       font-size: .8rem;
+      transition: .2s;
     }
     li.active{
       background-color: $bgActive;
+      color: $bgDarkBlue;
+      border-bottom: 1px solid limegreen;
     }
     li:hover{
       background-color: $bgActive;
+      color: $bgDarkBlue;
+      border-bottom: 1px solid $bgDarkBlue;
     }
 </style>

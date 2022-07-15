@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="MainSite" class="d-flex justify-content-around">
     <h3>main</h3>
   </div>
 </template>
@@ -12,6 +12,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import "../styles/var.scss"; 
+
+  #MainSite{
+    height: 80vh;
+    background-color: $bgDarkBlue;
+  }
 
 </style>
