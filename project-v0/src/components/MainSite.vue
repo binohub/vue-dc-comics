@@ -5,7 +5,30 @@
     <div id="divContent">
       <h5 id="hContent"> -- Content Goes Here -- </h5>
     </div>
-    <div id="divMerch"></div>
+    <div id="divMerch">
+      <ul class="gap-5">
+        <li>
+          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+          Digital Comics
+        </li>
+        <li>
+          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+          Digital Comics
+        </li>
+        <li>
+          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+          Digital Comics
+        </li>
+        <li>
+          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+          Digital Comics
+        </li>
+        <li>
+          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+          Digital Comics
+        </li>
+      </ul>
+    </div>
     <div id="divInfo"></div>
   </div>
 
@@ -44,8 +67,33 @@ export default {
 #divMerch {
   height: 15vh;
   width: 100%;
-  background-color: orange;
+  background-color: #0282f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
 }
+
+#divMerch ul {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+
+}
+
+li {
+  font-weight: bold;
+  padding: .8rem;
+  font-size: .8rem;
+  transition: .2s;
+}
+
+li img {
+  height: 80px;
+  padding: .8rem;
+}
+
 
 #divInfo {
   height: 50vh;
