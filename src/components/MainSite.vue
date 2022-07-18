@@ -10,46 +10,20 @@
       <div id="divContentDown">
         <div id="dcContainer" class="d-flex justify-content-between flex-wrap">
 
-          <div class="card-container">
+          <div class="card-container" v-for="(element, index) in dc" :key="index">
             <div class="image-container">
-              <img class="img-fluid" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
+              <img class="img-fluid"
+                :src="element.thumb"
+                alt="element.series">
             </div>
             <div class="title-container">
               <h3>
-                {{ "American Vampire 1976" }}
+                {{ element.series }}
               </h3>
             </div>
           </div>
-            <div class="card-container">
-            <div class="image-container">
-              <img class="img-fluid" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-            </div>
-            <div class="title-container">
-              <h3>
-                {{ "American Vampire 1976" }}
-              </h3>
-            </div>
-          </div>
-            <div class="card-container">
-            <div class="image-container">
-              <img class="img-fluid" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-            </div>
-            <div class="title-container">
-              <h3>
-                {{ "American Vampire 1976" }}
-              </h3>
-            </div>
-          </div>
-            <div class="card-container">
-            <div class="image-container">
-              <img class="img-fluid" src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-            </div>
-            <div class="title-container">
-              <h3>
-                {{ "American Vampire 1976" }}
-              </h3>
-            </div>
-          </div>
+
+
 
 
 
@@ -59,7 +33,7 @@
     </div>
 
 
-
+    <!-- 
 
 
     <div id="divMerch">
@@ -105,7 +79,7 @@
           <li>Characters</li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 
 
@@ -238,21 +212,27 @@ export default {
 #divContentDown div.card-container {
   height: 150px;
   width: calc(100% / 4);
+  gap: .2rem;
+  padding: .5rem 0;
 }
+
 #divContentDown div.image-container {
   height: 80%;
 }
+
 #divContentDown div.image-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: top;
 }
+
 #divContentDown div.title-container {
   height: 20%;
   background-color: black;
 }
-#divContentDown div.title-container h3{
+
+#divContentDown div.title-container h3 {
   font-size: 1rem;
   text-align: center;
 }
