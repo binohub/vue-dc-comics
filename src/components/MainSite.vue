@@ -4,7 +4,7 @@
   <div id="MainSite" class="d-flex">
     <div id="divContent">
       <div id="divContentUp">
-
+        <h5 class="jumboTxt">CURRENT SERIES</h5>
       </div>
 
       <div id="divContentDown">
@@ -17,7 +17,7 @@
                 alt="element.series">
             </div>
             <div class="title-container">
-              <h3>
+              <h3 class="fw-bold">
                 {{ element.series }}
               </h3>
             </div>
@@ -193,6 +193,8 @@ export default {
 }
 
 #divContentUp {
+  position: relative;
+
   min-height: 20vh;
   width: 100%;
 
@@ -200,8 +202,18 @@ export default {
   object-fit: cover;
   object-position: center;
 }
+#divContentUp .jumboTxt {
+  position: absolute;
+  bottom: -25px;
+  left: 50px;
+  background-color: #0282f9;
+  display: inline-block;
+  padding: .5rem;
+  font-weight: bold;
+}
 
 #divContentDown {
+  height: fit-content;
   width: 80%;
   margin: auto;
 
@@ -213,7 +225,7 @@ export default {
   height: 150px;
   width: calc(100% / 4);
   gap: .2rem;
-  padding: .5rem 0;
+  margin: .5rem 0;
 }
 
 #divContentDown div.image-container {
@@ -224,7 +236,6 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  object-position: top;
 }
 
 #divContentDown div.title-container {
