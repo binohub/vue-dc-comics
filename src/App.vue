@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderSite />
+    <HeaderSite/>
     <MainSite />
     <FooterSite />
   </div>
@@ -22,13 +22,17 @@ export default {
 </script>
 
 <style lang="scss">
-    @import "~bootstrap/scss/bootstrap.scss";
-    @import "./styles/var.scss"; 
-
-    body{
-      
-    }
-
-
-
-    </style>
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./assets/styles/var.scss";
+  body{
+    background-color: $mainBgColor;
+    color: whitesmoke;
+    letter-spacing: 1px;
+  }
+  .uwuContainer{
+    padding: .2rem;
+    width: 68%;
+    margin: 0 auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+</style>
