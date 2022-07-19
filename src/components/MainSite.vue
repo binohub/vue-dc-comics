@@ -55,27 +55,61 @@
       </div>
 
       <div id="divInfo">
-        <div class="uwuContainer">
+        <img class="logoInfo" src="../assets/img/dc-logo-bg.png" alt="logo info">
 
-          <div id="titleInfoBig" class="titleInfo">
-            <h5 class="hInfo">DC COMICS</h5>
-            <ul>
-              <li>Characters</li>
-              <li>Characters</li>
-              <li>Characters</li>
-              <li>Characters</li>
-              <li>Characters</li>
-              <li>Characters</li>
-            </ul>
+        <div class="uwuContainer d-flex flex-wrap">
+
+          <div class="sectionLink">
+            <div id="titleInfoBig" class="titleInfo">
+              <h5 class="hInfo">DC COMICS</h5>
+              <ul>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+              </ul>
+            </div>
+
+            <div id="titleInfoSmall" class="titleInfo">
+              <h5 class="hInfo">HELP</h5>
+              <ul>
+                <li>Characters</li>
+                <li>Characters</li>
+              </ul>
+            </div>
           </div>
 
-          <div id="titleInfoSmall" class="titleInfo">
-            <h5 class="hInfo">HELP</h5>
-            <ul>
-              <li>Characters</li>
-              <li>Characters</li>
-            </ul>
+          <div class="sectionLink">
+            <div id="titleInfoBig" class="titleInfo">
+              <h5 class="hInfo">DC </h5>
+              <ul>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+              </ul>
+            </div>
           </div>
+
+          <div class="sectionLink">
+            <div id="titleInfoBig" class="titleInfo">
+              <h5 class="hInfo">SITES</h5>
+              <ul>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+                <li>Characters</li>
+              </ul>
+            </div>
+          </div>
+
+
 
         </div>
 
@@ -86,18 +120,6 @@
     </div>
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 </template>
 
@@ -187,7 +209,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @import "../styles/var.scss";
 
 #MainSite {
@@ -251,47 +272,53 @@ export default {
       background-color: #0282f9;
 
       ul {
-          text-decoration: none;
-          list-style-type: none;
-          display: flex;
-          margin: 0;
-          padding: 0;
-        
-          li img {
-            height: 80px;
-            padding: 1.5rem;
-          }
+        text-decoration: none;
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li img {
+          height: 80px;
+          padding: 1.5rem;
         }
-      
+      }
+
     }
 
     #divInfo {
       background-image: url("../assets/img/footer-bg.jpg");
       padding: 2rem 0;
-      
+      position: relative;
+
+      .logoInfo {
+        position: absolute;
+        height: 90%;
+
+        right: 300px;
+      }
+
       .titleInfo {
         text-align: start;
         width: 250px;
         padding: .8rem 0;
+        text-transform: uppercase;
       }
+
       ul {
         text-decoration: none;
         list-style-type: none;
         margin: 0;
         padding: 0;
+
         li {
-        font-weight: bold;
-        padding: .5rem 0;
-        font-size: .8rem;
+          font-weight: bold;
+          padding: .5rem 0;
+          font-size: .8rem;
+          text-transform: uppercase;
         }
       }
-      
-
-
-
     }
-
-
   }
 }
 </style>
