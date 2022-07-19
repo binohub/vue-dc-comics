@@ -7,8 +7,9 @@
         <h5 class="jumboTxt">CURRENT SERIES</h5>
       </div>
 
-      <div id="divContentDown" >
-        <div id="dcContainer" class="uwuContainer d-flex justify-content-between flex-wrap">
+      <div id="divContentDown">
+
+        <div id="dcContainer" class="uwuContainer d-flex justify-content-center flex-wrap">
 
           <div class="card-container" v-for="(cardi, index) in dc" :key="index">
             <div class="image-container">
@@ -19,11 +20,61 @@
                 {{ cardi.series }}
               </h3>
             </div>
-
           </div>
+          <button id="btnLoad" type="button" class="btn btn-primary">LOAD MORE!</button>
+
         </div>
 
       </div>
+
+      <div id="divMerch">
+        <div class="uwuContainer">
+          <ul class="justify-content-between">
+            <li>
+              <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+              Digital Comics
+            </li>
+            <li>
+              <img src="../assets/img/buy-comics-merchandise.png" alt="">
+              Merchandise
+            </li>
+            <li>
+              <img src="../assets/img/buy-comics-shop-locator.png" alt="">
+              Shop Locator
+            </li>
+            <li>
+              <img src="../assets/img/buy-comics-subscriptions.png" alt="">
+              Buy Comics Sub
+            </li>
+            <li>
+              <img src="../assets/img/buy-dc-power-visa.svg" alt="">
+              Visa
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- <div id="divInfo">
+        <div id="titleInfo">
+          <h5 class="hInfo">DC COMICS</h5>
+          <ul>
+            <li>Characters</li>
+            <li>Characters</li>
+            <li>Characters</li>
+            <li>Characters</li>
+            <li>Characters</li>
+            <li>Characters</li>
+          </ul>
+        </div>
+        <div id="titleInfo">
+          <h5 class="hInfo">HELP</h5>
+          <ul>
+            <li>Characters</li>
+            <li>Characters</li>
+          </ul>
+        </div>
+      </div> -->
 
     </div>
 
@@ -34,53 +85,10 @@
 
 
 
-  <!-- 
 
 
-    <div id="divMerch">
-      <ul class="gap-5">
-        <li>
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          Digital Comics
-        </li>
-        <li>
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          Digital Comics
-        </li>
-        <li>
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          Digital Comics
-        </li>
-        <li>
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          Digital Comics
-        </li>
-        <li>
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="">
-          Digital Comics
-        </li>
-      </ul>
-    </div>
-    <div id="divInfo">
-      <div id="titleInfo">
-        <h5 class="hInfo">DC COMICS</h5>
-        <ul>
-          <li>Characters</li>
-          <li>Characters</li>
-          <li>Characters</li>
-          <li>Characters</li>
-          <li>Characters</li>
-          <li>Characters</li>
-        </ul>
-      </div>
-      <div id="titleInfo">
-        <h5 class="hInfo">HELP</h5>
-        <ul>
-          <li>Characters</li>
-          <li>Characters</li>
-        </ul>
-      </div>
-    </div> -->
+
+
 
 
 
@@ -172,11 +180,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @import "../styles/var.scss";
 
 #MainSite {
   #divContent {
+
     #divContentUp {
       position: relative;
 
@@ -193,24 +201,45 @@ export default {
         padding: .8rem;
       }
     }
-        #divContentDown {
-          padding: 5rem 0;
-          .card-container {
-            width: calc(100% / 4);
-          }
-          .image-container {
-            height: 80%;
-          }
-          .title-container {
-            height: 20%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-}
+    #divContentDown {
+      padding: 5rem 0;
 
-          
+      .card-container {
+        width: calc(100% / 4);
+      }
+
+      .image-container {
+        height: 80%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
         }
+      }
+
+      .title-container {
+        height: 20%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+          font-size: .8rem;
+        }
+      }
+      #btnLoad {
+        ont-size: 1.5rem;
+      }
+
+    }
+    #divMerch {
+      width: 100%;
+      padding: 1rem 0;
+      background-color: #0282f9;
+    }
 
   }
 }
@@ -225,30 +254,13 @@ export default {
 
 
 
-#divContentDown div.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 
 
 
-#divContentDown div.title-container h3 {
-  font-size: 1rem;
-  text-align: center;
-}
 
 
-#divMerch {
-  height: 15vh;
-  width: 100%;
-  background-color: #0282f9;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
 
-}
+
 
 #divMerch ul {
   text-decoration: none;
