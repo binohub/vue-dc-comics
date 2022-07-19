@@ -73,8 +73,9 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/var.scss";
 
-#headerSite {
+#headerSite { 
   background-color: white;
+  height: 10vh;
   div.uwuContainer {
     display: flex;
   }

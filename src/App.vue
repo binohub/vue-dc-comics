@@ -28,11 +28,11 @@ export default {
     background-color: $mainBgColor;
     color: whitesmoke;
     letter-spacing: 1px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   .uwuContainer{
     padding: .2rem;
     width: 68%;
     margin: 0 auto;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 </style>

@@ -1,39 +1,40 @@
 <template>
+  <div id="MainSite" class="">
 
-
-  <div id="MainSite" class="d-flex">
     <div id="divContent">
+
       <div id="divContentUp">
         <h5 class="jumboTxt">CURRENT SERIES</h5>
       </div>
 
-      <div id="divContentDown">
-        <div id="dcContainer" class="d-flex justify-content-between flex-wrap">
+      <div id="divContentDown" >
+        <div id="dcContainer" class="uwuContainer d-flex justify-content-between flex-wrap">
 
-          <div class="card-container" v-for="(element, index) in dc" :key="index">
+          <div class="card-container" v-for="(cardi, index) in dc" :key="index">
             <div class="image-container">
-              <img class="img-fluid"
-                :src="element.thumb"
-                alt="element.series">
+              <img class="img-fluid" :src="cardi.thumb" alt="element.series">
             </div>
             <div class="title-container">
               <h3 class="fw-bold">
-                {{ element.series }}
+                {{ cardi.series }}
               </h3>
             </div>
+
           </div>
-
-
-
-
-
         </div>
+
       </div>
 
     </div>
 
+  </div>
 
-    <!-- 
+
+
+
+
+
+  <!-- 
 
 
     <div id="divMerch">
@@ -80,15 +81,12 @@
         </ul>
       </div>
     </div> -->
-  </div>
 
 
 
 </template>
 
 <script>
-
-
 export default {
   data: function () {
     return {
@@ -174,63 +172,58 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @import "../styles/var.scss";
 
 #MainSite {
-  height: 80vh;
-  background-color: $bgDarkBlue;
-  flex-direction: column;
+  #divContent {
+    #divContentUp {
+      position: relative;
+
+      height: 40vh;
+      background-image: url('../assets/img/jumbotron.jpg');
+
+      .jumboTxt {
+        position: absolute;
+        bottom: -25px;
+        left: 300px;
+
+        background-color: #0282f9;
+        display: inline-block;
+        padding: .8rem;
+      }
+    }
+        #divContentDown {
+          padding: 5rem 0;
+          .card-container {
+            width: calc(100% / 4);
+          }
+          .image-container {
+            height: 80%;
+          }
+          .title-container {
+            height: 20%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
 }
 
-#divContent {
-  min-height: 40vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+          
+        }
 
-  background-color: black;
-  color: white;
+  }
 }
 
-#divContentUp {
-  position: relative;
 
-  min-height: 20vh;
-  width: 100%;
 
-  background-image: url('../assets/img/jumbotron.jpg');
-  object-fit: cover;
-  object-position: center;
-}
-#divContentUp .jumboTxt {
-  position: absolute;
-  bottom: -25px;
-  left: 50px;
-  background-color: #0282f9;
-  display: inline-block;
-  padding: .5rem;
-  font-weight: bold;
-}
 
-#divContentDown {
-  height: fit-content;
-  width: 80%;
-  margin: auto;
 
-  font-size: 2rem;
-  color: white;
-}
 
-#divContentDown div.card-container {
-  height: 150px;
-  width: calc(100% / 4);
-  gap: .2rem;
-  margin: .5rem 0;
-}
 
-#divContentDown div.image-container {
-  height: 80%;
-}
+
+
+
 
 #divContentDown div.image-container img {
   width: 100%;
@@ -238,10 +231,7 @@ export default {
   object-fit: contain;
 }
 
-#divContentDown div.title-container {
-  height: 20%;
-  background-color: black;
-}
+
 
 #divContentDown div.title-container h3 {
   font-size: 1rem;
