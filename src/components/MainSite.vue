@@ -54,27 +54,34 @@
         </div>
       </div>
 
+      <div id="divInfo">
+        <div class="uwuContainer">
 
-      <!-- <div id="divInfo">
-        <div id="titleInfo">
-          <h5 class="hInfo">DC COMICS</h5>
-          <ul>
-            <li>Characters</li>
-            <li>Characters</li>
-            <li>Characters</li>
-            <li>Characters</li>
-            <li>Characters</li>
-            <li>Characters</li>
-          </ul>
+          <div id="titleInfoBig" class="titleInfo">
+            <h5 class="hInfo">DC COMICS</h5>
+            <ul>
+              <li>Characters</li>
+              <li>Characters</li>
+              <li>Characters</li>
+              <li>Characters</li>
+              <li>Characters</li>
+              <li>Characters</li>
+            </ul>
+          </div>
+
+          <div id="titleInfoSmall" class="titleInfo">
+            <h5 class="hInfo">HELP</h5>
+            <ul>
+              <li>Characters</li>
+              <li>Characters</li>
+            </ul>
+          </div>
+
         </div>
-        <div id="titleInfo">
-          <h5 class="hInfo">HELP</h5>
-          <ul>
-            <li>Characters</li>
-            <li>Characters</li>
-          </ul>
-        </div>
-      </div> -->
+
+
+      </div>
+
 
     </div>
 
@@ -180,6 +187,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @import "../styles/var.scss";
 
 #MainSite {
@@ -230,92 +238,60 @@ export default {
           font-size: .8rem;
         }
       }
+
       #btnLoad {
         ont-size: 1.5rem;
       }
 
     }
+
     #divMerch {
       width: 100%;
       padding: 1rem 0;
       background-color: #0282f9;
+
+      ul {
+          text-decoration: none;
+          list-style-type: none;
+          display: flex;
+          margin: 0;
+          padding: 0;
+        
+          li img {
+            height: 80px;
+            padding: 1.5rem;
+          }
+        }
+      
     }
 
+    #divInfo {
+      background-image: url("../assets/img/footer-bg.jpg");
+      padding: 2rem 0;
+      
+      .titleInfo {
+        text-align: start;
+        width: 250px;
+        padding: .8rem 0;
+      }
+      ul {
+        text-decoration: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+        font-weight: bold;
+        padding: .5rem 0;
+        font-size: .8rem;
+        }
+      }
+      
+
+
+
+    }
+
+
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#divMerch ul {
-  text-decoration: none;
-  list-style-type: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-#divInfo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: center;
-
-  background-image: url("../assets/img/footer-bg.jpg");
-}
-
-#titleInfo {
-  width: 200px;
-  text-align: center;
-  color: white;
-  font-weight: 800;
-}
-
-li {
-  font-weight: bold;
-  padding: .5rem;
-  font-size: .8rem;
-  transition: .2s;
-}
-
-li img {
-  height: 80px;
-  padding: .8rem;
-}
-
-
-#divInfo {
-  height: 50vh;
-  width: 100%;
-}
-
-#divInfo ul {
-  text-decoration: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-#hContent {
-  font-weight: 400;
-  font-size: 1.8rem;
 }
 </style>
